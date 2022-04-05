@@ -1,0 +1,38 @@
+---
+log_level: info
+reset_quota_time: 00:00:00
+table_name: netquotas
+table_priority: 10
+quota_devices:
+- ppp0
+- wg0
+
+quotas:
+- name: skye
+  limit: 450mb
+  trigger_macs:
+  - d8:9e:61:fb:80:f6
+  - 00:bb:1c:06:36:ea
+  quota_hosts:
+  - 192.168.2.11
+  - 192.168.2.29
+
+- name: reece
+  limit: 450mb
+  trigger_macs:
+  - d8:9e:61:fb:80:f6
+  - 00:bb:1c:06:36:ea
+  quota_hosts:
+  - 192.168.2.12
+  - 192.168.2.224
+
+- name: blake
+  limit: 450mb
+  trigger_macs:
+  - d8:9e:61:fb:80:f6
+  - 00:bb:1c:06:36:ea
+  quota_hosts:
+  - 192.168.2.50
+  - 192.168.2.51
+...
+
